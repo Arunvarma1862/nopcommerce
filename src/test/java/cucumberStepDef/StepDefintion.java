@@ -11,7 +11,6 @@ import org.apache.logging.log4j.core.Logger;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -41,8 +40,8 @@ public class StepDefintion extends BaseClass {
 	String br= configpro.getProperty("browser");
 	
 	if(br.equals("chrome")) {
-		WebDriverManager.chromedriver().setup();
-		driver= new ChromeDriver();
+	WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver();
 		logger.info("***********launching browser***********");
 	}
 	else if (br.equals("edge")) {
@@ -59,14 +58,14 @@ public class StepDefintion extends BaseClass {
 	public void user_launch_chrome_browser() {
 		
 	    lpo	= new loginPageObjects(driver);
-		logger.info("***********launching browser***********");
+		
 	}
 
 	@When("User open URL {string}")
 	public void user_open_url(String url) {
 		
 	  driver.get(url);
-		logger.info("***********launching browser***********");
+		logger.info("***********navigate to url***********");
 
 	}
 
@@ -75,7 +74,7 @@ public class StepDefintion extends BaseClass {
 		
 		lpo.setUserName(email);
 		lpo.setUserPass(pass);
-		logger.info("***********launching browser***********");
+		logger.info("***********enter email and password***********");
 	}
 
 	@When("Click on Login")
@@ -83,6 +82,7 @@ public class StepDefintion extends BaseClass {
 
 		
 		lpo.Login();
+		logger.info("***********login success***********");
 	}
 
 	@Then("Page Title should be {string}")
@@ -101,6 +101,7 @@ public class StepDefintion extends BaseClass {
 	public void user_click_on_logout_link() throws InterruptedException {
           lpo.Logout();
           Thread.sleep(2000);
+      	logger.info("***********logout sucesss***********");
 	}
 	
 	@Then("close browsers")

@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 		monochrome=true,
 		plugin= {"pretty",
 				"html:target/cucumber-reports/report.html"
-				 	},publish=true,tags= "@sanity")
+		} ,publish=true)
 
 //	plugin= {"pretty","html:target/cucumber-reports/report.html"}
 //plugin= {"pretty","json:target/cucumber-reports/report.json"}

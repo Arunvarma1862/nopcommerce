@@ -1,0 +1,6 @@
+15:04:33.324 [main] INFO  cucumberStepDef.StepDefintion - ***********launching browser***********
+15:04:37.322 [main] INFO  cucumberStepDef.StepDefintion - ***********navigate to url***********
+15:04:38.763 [main] INFO  cucumberStepDef.StepDefintion - ***********enter email and password***********
+15:04:48.053 [main] INFO  cucumberStepDef.StepDefintion - ***********login success***********
+15:04:54.307 [main] INFO  cucumberStepDef.StepDefintion - ***********logout sucesss***********
+15:04:54.402 [AsyncHttpClient-1-4] TRACE io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder - Encoding WebSocket Frame opCode=8 length=26

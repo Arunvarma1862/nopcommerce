@@ -19,10 +19,7 @@ public WebDriver driver;
 		
 		
 	}
-
-	
-	
-    By customer=	By.xpath("(//a[@href='#' and  @class='nav-link'])[6]");	
+     By customer=	By.xpath("(//a[@href='#' and  @class='nav-link'])[6]");	
      By custList=	By.xpath("//a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]");
      By Add=	By.xpath("//a[normalize-space()='Add new']");
      By email=	By.xpath("//input[@id='Email']");
@@ -64,9 +61,6 @@ public WebDriver driver;
     	 
      }
      
-  /*  public void setcust() {
-    	 cust.click();
-     }*/
      public void clickOnCustMenuitem() {
     	 driver.findElement(custList).click();
     	 
